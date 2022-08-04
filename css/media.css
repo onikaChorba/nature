@@ -1,0 +1,118 @@
+
+/* media */
+ @media screen and (min-width:350px) {
+    .container{
+        min-width: initial;
+    }
+}
+
+@media screen and (min-width:470px) {
+    .hero::before{
+        height: 9.4rem;
+        background: url("../img/wave-medium.png");
+        background-size: cover;
+    }
+    .testimonials::before{
+        height: 9.4rem;
+        background: url("../img/wave-medium-reversed.png");
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width:700px){
+    header{
+        height: 8rem;
+    }
+    .nav-brand{
+        width: 3.5rem;
+    }
+    .nav-list{
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        position: initial;
+        top: initial;
+        right: initial;
+        flex-direction: row;
+        transition: initial;
+    }
+    .menu-icons{
+        display: none;
+    }
+    .nav-item{
+        margin: 0 2.5rem;
+    }
+    .nav-link,
+    .current{
+        color: #fafafa;
+        position: relative;
+        font-size: 1.3rem;
+    }
+    .nav-link::before,
+    .current:before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -0.5rem;
+        background-color: #eb648c;
+        width: 100%;
+        height: 2px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 650ms;
+    }
+    .current::before{
+        transform: scaleX(1);
+    }
+    .nav-link:hover::before{
+        transform: scaleX(1);
+    }
+    .hero{
+        height: 60vh;
+    }
+    .title-heading h1{
+        font-size: 2.5rem;
+    }
+    .hero::after{
+        height: 6.7rem;
+    }
+    .testimonials::after{
+        height: 7rem;
+    }
+}
+@media screen and (min-width:950px){
+    .main-messages{
+        max-width: initial;
+    }
+    .hero::before{
+        background: url("../img/wave-large.png");
+        background-size: cover;
+    }
+    .testimonials::before{
+        height: 10rem;
+        background: url("../img/wave-large-reversed.png");
+        background-size: cover;
+    }
+    .testimonials::after{
+        height: 9.7rem;
+        background: url("../img/wave-large.png");
+        background-size: cover;
+    }
+    .btn{
+        float: left;
+    }
+}
+@media screen and (min-width:1200px){
+    .hero{
+        height: 100vh;
+    }
+    .testimonials::before{
+        height: 13rem;
+    }
+    .container {
+        width: 100%;
+        max-width: 120rem;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+}

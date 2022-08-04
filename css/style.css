@@ -1,0 +1,314 @@
+/* Global style */
+*,
+*::before,
+*::after{
+    margin: 0px;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    font-family: 'Nunito', sans-serif;
+    font-size: 10px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+ a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+p{
+    font-size: 1.6rem;
+}
+img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+section{
+    padding: 5rem 0;
+}
+
+/* header */
+header{
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.container{
+    width: 100%;
+    min-width: 98rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+nav{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 0 2rem;
+}
+nav{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+     margin: 0 2rem;
+}
+.nav-brand{
+    width: 3rem;
+}
+.menu-icons i{
+    font-size: 2.5rem;
+    color: #fafafa;
+    cursor: pointer;
+}
+.close i{
+    color: #fafafa;
+}
+.nav-list{
+    display: flex;
+    flex-direction: column;
+    opacity: 0.97;
+    width: 25rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -26rem;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    transition: all 650ms ease-in-out;
+}
+.nav-list.active{
+    right: 0;
+    background: #eb648c;
+}
+.close{
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+}
+.nav-item{
+    margin: 2rem 0;
+}
+.nav-link{
+    text-transform: uppercase;
+    color: #fafafa;
+    font-size: medium;
+}
+.hero{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72,56,149,0.8)100%), url("../img/header-bg.jpg") center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.hero::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 4.7rem;
+    background: url("../img/wave-small.png") center/cover no-repeat;
+}
+.main-messages{
+    width: 100%;
+    height: 50vh;
+    color: #fafafa;
+    max-width: 50rem;
+    text-transform: uppercase;
+    transform: translateY(10%);
+    padding: 2rem;
+    text-align: center;
+} 
+ .main-messages h3{
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-family: 'Aldrich', sans-serif;
+    text-transform: uppercase;
+}
+.main-messages h1{
+    font-family: 'Aldrich', sans-serif;
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    text-transform: uppercase;
+}
+.main-messages p{
+    margin: 2rem 0;
+}
+.btn{
+    background-color: #eb648c;
+    border-radius: 2rem;
+    color: #fafafa;
+    display: inline-block;
+    margin-top: 0;
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    transition: background-color 550ms;
+}
+.btn:hover{
+    background-color: #ce587b;
+    transform: scale(0.98);
+} 
+/* experience the outdoors */
+ .experience-outdoors{
+    padding: 0;
+    z-index: -2;
+    margin: 2rem;
+}
+.title-heading{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+.title-heading h3{
+    font-size: 1.4rem;
+}
+.title-heading h1{
+    font-family:'Aldrich', sans-serif;
+    font-size: 2rem;
+    margin: .5rem 0 1rem;
+}
+.title-heading p{
+    text-transform: lowercase;
+}
+.activities-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    grid-gap: 2rem;
+}
+
+.activities-grid-item{
+    height: 40rem;
+    padding: 5rem;
+    color: #fafafa;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    z-index: -2;
+    padding: 0 4rem;
+    overflow: hidden;
+}
+.activities-grid-item:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72,56,149,0.8)100%);
+    z-index: -1;
+}
+.star-gazing{
+    background: url("../img/stars.jpg") center no-repeat;
+}
+.hiking{
+    background: url("../img/hiking.jpg") center no-repeat;
+}
+.camping{
+    background: url("../img/camping.jpg") center no-repeat;
+}
+.activities-grid-item i{
+    font-size: 3.5rem;
+    color: #eb648c;
+}
+.activities-grid-item h1{
+    font-family:'Aldrich', sans-serif;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    margin: 1.5rem 0;
+}
+
+.testimonials{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72,56,149,0.8)100%), url("../img/testimonials-bg.jpg") center no-repeat fixed;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.testimonials::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 100%;
+    height: 4.7rem;
+    background: url("../img/wave-small-reversed.png")  no-repeat center/cover;
+}
+.testimonials::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 4.7rem;
+    background: url("../img/wave-small.png") no-repeat center/cover;
+  }
+.testimonial{
+    width: 100%;
+    color: #fafafa;
+    top: 55%;
+    left: 50%;
+    text-align: center;
+}
+.testimonial-text-box{
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+.testimonial-text-box i{
+    color: #eb648c;
+    opacity: .5;
+    font-size: 5rem;
+}
+
+.testimonial-customer img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 100%;
+    border: 3px solid #eb648c;
+    margin: 2rem;
+}
+.testimonial-customer h3{
+    font-size: 1.6rem;
+}
+.begin-adventure {
+    padding: 0;
+    margin-top: 2rem;
+    position: relative;
+}
+.advanture-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.advanture-grid-item p{
+    color: rgba(0, 0, 0, 0.7);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+footer{
+    padding: 2.5rem 0;
+    background-color: #d7d4ed;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
+    position: relative;
+}
